@@ -14,3 +14,11 @@ function longTask(millSecondTime) {
 console.log("start.....");
 longTask(2000);
 console.log("end.....");
+
+console.log("start.....");
+longTask(2000);
+console.log("end.....");
+
+console.log("start.....");
+longTask(2000);
+console.log("end.....");
