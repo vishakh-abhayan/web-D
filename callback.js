@@ -11,14 +11,15 @@ function longTask(millSecondTime) {
   while (new Date() - dt <= millSecondTime) {}
 }
 
-console.log("start.....");
-longTask(2000);
-console.log("end.....");
+function showEnd() {
+  console.log("end.....");
+}
 
 console.log("start.....");
-longTask(2000);
-console.log("end.....");
+setTimeout(showEnd, 2000);
 
 console.log("start.....");
-longTask(2000);
-console.log("end.....");
+setTimeout(showEnd, 2000);
+
+console.log("start.....");
+setTimeout(showEnd, 2000);
