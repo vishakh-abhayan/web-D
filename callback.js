@@ -24,16 +24,30 @@
 // console.log("start.....");
 // setTimeout(showEnd, 2000);
 
-let person = {
-  name: "vishakh",
-  age: "18",
-  display: function () {
-    console.log(this.name);
-  },
-};
+// let person = {
+//   name: "vishakh",
+//   age: "18",
+//   display: function () {
+//     console.log(this.name);
+//   },
+// };
 
-for (x in person) {
-  console.log(person[x]);
+// for (x in person) {
+//   console.log(person[x]);
+// }
+
+// person.display();
+
+function person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.display = function () {
+    console.log("Name : " + this.name + "   age :  " + this.age);
+  };
 }
 
-person.display();
+let vishakh = new person("vishkah", 18);
+let myran = new person("godson", 20);
+
+vishakh.display();
+myran.display();
