@@ -38,16 +38,24 @@
 
 // person.display();
 
-function person(name, age) {
-  this.name = name;
-  this.age = age;
-  this.display = function () {
-    console.log("Name : " + this.name + "   age :  " + this.age);
-  };
-}
+// function person(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.display = function () {
+//     console.log("Name : " + this.name + "   age :  " + this.age);
+//   };
+// }
 
-let vishakh = new person("vishkah", 18);
-let myran = new person("godson", 20);
+// let vishakh = new person("vishkah", 18);
+// let myran = new person("godson", 20);
 
-vishakh.display();
-myran.display();
+// vishakh.display();
+// myran.display();
+
+const her = setInterval(() => {
+  console.log("hello......");
+}, 0000);
+
+setTimeout(() => {
+  clearInterval(her);
+}, 10000);
