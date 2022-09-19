@@ -52,10 +52,24 @@
 // vishakh.display();
 // myran.display();
 
-const her = setInterval(() => {
-  console.log("hello......");
-}, 0000);
+// const her = setInterval(() => {
+//   console.log("hello......");
+// }, 0000);
 
-setTimeout(() => {
-  clearInterval(her);
-}, 10000);
+// setTimeout(() => {
+//   clearInterval(her);
+// }, 10000);
+
+// let hello = function (data) {
+//   console.log("Data : " + data);
+// };
+
+// let hoy = function (callback) {
+//   callback("vishakh is the power full man in the world");
+// };
+
+// hoy(hello);
+
+module.exportes.hello = function () {
+  console.log("hi frinends");
+};
