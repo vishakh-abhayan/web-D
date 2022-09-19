@@ -70,6 +70,6 @@
 
 // hoy(hello);
 
-module.exportes.hello = function () {
-  console.log("hi frinends");
-};
+// module.exportes.hello = function () {
+//   console.log("hi frinends");
+// };

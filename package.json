@@ -15,5 +15,8 @@
     "url": "https://github.com/vishakh-abhayan/web-D/issues"
   },
   "homepage": "https://github.com/vishakh-abhayan/web-D#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "upper-case": "^2.0.2"
+  }
 }
