@@ -1,3 +1,8 @@
+// function (req, res) {
+//   res.write("User Found!");
+//   res.end();
+// }
+
 let http = require("http");
 let fs = require("fs");
 
@@ -22,8 +27,3 @@ http
     }
   })
   .listen(3000, () => console.log("server runing..........."));
-
-// function (req, res) {
-//   res.write("User Found!");
-//   res.end();
-// }
