@@ -3,10 +3,13 @@ const path = require("path");
 
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "login.html"));
 });
-app.get("/about", (req, res) => {
+app.post("/login", (req, res) => {
+  res.send("login sucessfully");
+});
+app.get("/", (req, res) => {
   res.send("welocom world!");
 });
 
