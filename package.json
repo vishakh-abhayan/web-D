@@ -17,6 +17,7 @@
   "homepage": "https://github.com/vishakh-abhayan/web-D#readme",
   "description": "",
   "dependencies": {
+    "express": "^4.18.1",
     "upper-case": "^2.0.2"
   }
 }
