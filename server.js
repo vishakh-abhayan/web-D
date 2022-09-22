@@ -5,22 +5,26 @@
 
 let http = require("http");
 let fs = require("fs");
+let url = require("url");
 
 http
   .createServer(function (req, res) {
-    if (req.url === "/") {
+    let q = url.parse(req.url);
+    console.log(q.pathname);
+
+    if (q.pathname === "/") {
       fs.readFile("index.html", function (err, data) {
         res.writeHead(200, { "Content-Type": "text/html" });
         res.write(data);
         res.end();
       });
-    } else if (req.url === "/login") {
+    } else if (q.pathname === "/login") {
       fs.readFile("login.html", function (err, data) {
         res.writeHead(200, { "Content-Type": "text/html" });
         res.write(data);
         res.end();
       });
-    } else if (req.url === "/loginaction") {
+    } else if (q.pathname === "/loginaction") {
       res.writeHead(200, { "Content-Type": "text/html" });
       res.write("login-sucessful.....");
       res.end();
