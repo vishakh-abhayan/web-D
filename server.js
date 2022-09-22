@@ -8,18 +8,22 @@ let fs = require("fs");
 
 http
   .createServer(function (req, res) {
-    if (req.url == "/") {
+    if (req.url === "/") {
       fs.readFile("index.html", function (err, data) {
         res.writeHead(200, { "Content-Type": "text/html" });
         res.write(data);
         res.end();
       });
-    } else if (req.url == "/login") {
+    } else if (req.url === "/login") {
       fs.readFile("login.html", function (err, data) {
         res.writeHead(200, { "Content-Type": "text/html" });
         res.write(data);
         res.end();
       });
+    } else if (req.url === "/loginaction") {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write("login-sucessful.....");
+      res.end();
     } else {
       res.writeHead(404, { "Content-Type": "text/html" });
       res.write("error");
