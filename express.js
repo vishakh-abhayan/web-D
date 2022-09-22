@@ -2,9 +2,18 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
+app.use((req, res, next) => {
+  console.log("start...");
+  next();
+});
 
-app.get("/login", (req, res) => {
+app.get("/login", (req, res, next) => {
   res.sendFile(path.join(__dirname, "login.html"));
+  console.log("middle");
+  next();
+});
+app.use((req, res) => {
+  console.log("end...");
 });
 app.post("/login", (req, res) => {
   res.send("login sucessfully");
