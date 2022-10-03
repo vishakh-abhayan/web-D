@@ -2,10 +2,13 @@ const express = require("express");
 const app = express();
 
 app.get("/", Token, (req, res) => {
+  console.log("user loged.......");
   res.send("<h1>Hey Vishakh </h1>");
+  console.log("end.......");
 });
 
 function Token(req, res, next) {
+  console.log("start.......");
   console.log("token created.........");
   next();
 }
