@@ -16,6 +16,15 @@ function getMoblie() {
   });
 }
 
-promise.all([getName(), getMoblie()]).then((result) => {
-  console.log(result);
-});
+// promise.all([getName(), getMoblie()]).then((result) => {
+//   console.log(result);
+// });
+
+async function getUser() {
+  let name = await getName();
+  console.log(name);
+  let num = await getMoblie();
+  console.log(num);
+}
+
+getUser();
