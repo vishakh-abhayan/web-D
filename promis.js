@@ -27,3 +27,5 @@ add(50, 40, (sum, err) => {
     });
   }
 });
+
+const promise = require("promise");
